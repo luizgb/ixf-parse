@@ -20,12 +20,12 @@ if (!function_exists('curl_init')) {
 
 if (!filter_var($argv[1], FILTER_VALIDATE_URL)) {
     echo "USAGE: php ixp-unused-addr.php <url>".PHP_EOL;
-    echo "Parameter <url> is not a valid URL".PHP_EOL;
+    echo "ERROR: Parameter <url> is not a valid URL".PHP_EOL;
     exit();
 }
 
 $url=$argv[1];
-$data=json_decode(getIxf($url), true);
+$data=json_decode(getJson($url), true);
 
 
 $ixp_prefix_v4=null;
@@ -105,7 +105,7 @@ foreach ($ixp_prefix_v4 as $cidr_v4) {
 
 // functions
 
-function getIxf($url){
+function getJson($url){
     $curl = curl_init();
 
     curl_setopt($curl, CURLOPT_URL, $url);
