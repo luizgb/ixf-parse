@@ -1,4 +1,4 @@
-Ferramentas para consumir dados obtidos pelos IXs que expotam no padrão IX-F Member Export
+Ferramentas para consumir dados obtidos pelos IXs que expotam no padrão IX-F Member Export e Alice-LG
 
 Exemplos:
 
