@@ -48,12 +48,17 @@ if (is_array($data['neighbours'])) {
 }
 
 
+if (is_array($member_address)){
+    echo "### CIDR: ".$cidr.PHP_EOL;
+    $ips=printIpDiff($member_address, $cidr);
 
-echo "### CIDR: ".$cidr.PHP_EOL;
-$ips=printIpDiff($member_address, $cidr);
+    foreach ($ips as $ip){
+        echo $ip.PHP_EOL;
+    }
 
-foreach ($ips as $ip){
-    echo $ip.PHP_EOL;
+}
+else {
+    echo "Empty array or wrong query".PHP_EOL;
 }
 
 
